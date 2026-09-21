@@ -44,6 +44,7 @@ class TaglineDataManager: @unchecked Sendable {
   }
 }
 
+// MARK: - TaglineDataManager
 /// This extension contains the public query API to find specific sessions.
 extension TaglineDataManager {
   /// - Returns: The `Tagline` with `identifier`, or `nil` if no match is found.

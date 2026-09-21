@@ -43,8 +43,10 @@ enum TaglineEnhancer {
 
     let session = LanguageModelSession()
     let response = try await session.respond(
-      to:
-        "Rewrite this tagline into a single over-the-top marketing line packed with buzzwords, momentum, and confidence. Keep the core meaning intact. Tagline: \(sourceTagline)",
+      to: """
+        Rewrite this tagline into a single over-the-top marketing line packed
+        with buzzwords, momentum, and confidence. Keep the core meaning intact. Tagline: \(sourceTagline)
+        """,
       generating: EnhancedTagline.self
     )
 

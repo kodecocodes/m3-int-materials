@@ -44,17 +44,14 @@ struct EnhanceTaglineIntent: AppIntent {
   @Parameter(default: "")
   var name: String
 
-  @Parameter
-  var content: AttributedString?
+  @Parameter var content: AttributedString?
 
   @Parameter(title: "Attachments", supportedContentTypes: [.data])
   var attachments: [IntentFile]
 
-  @Parameter
-  var isPinned: Bool
+  @Parameter var isPinned: Bool
 
-  @Parameter
-  var folder: FolderEntity?
+  @Parameter var folder: FolderEntity?
 
   static var parameterSummary: some ParameterSummary {
     Summary("Enhance \(\.$name)")

@@ -46,7 +46,10 @@ struct CreativityInstructions: DynamicInstructions {
       if creativityLevel == .low {
         "You are an novice marketer, and your taglines are often a bit clichéd."
       } else if creativityLevel == .medium {
-        "You are a mid career marketer, and your taglines are a bit more original, but still not as innovative as you'd like"
+        """
+        You are a mid career marketer, and your taglines are a bit more original,
+        but still not as innovative as you'd like
+        """
       } else {
         "You are an experienced marketer, and draw upon years of experience to generate the best taglines possible"
       }
@@ -121,8 +124,10 @@ enum TaglineEnhancer {
     )
 
     let response = try await session.respond(
-      to:
-        "Rewrite this tagline into a single over-the-top marketing line packed with buzzwords, momentum, and confidence. Keep the core meaning intact. Tagline: \(sourceTagline)",
+      to: """
+        Rewrite this tagline into a single over-the-top marketing line packed
+        with buzzwords, momentum, and confidence. Keep the core meaning intact. Tagline: \(sourceTagline)
+        """,
       generating: EnhancedTagline.self
     )
 
